@@ -277,6 +277,7 @@ body{
 
 .index .cont{
 	height:100%;
+	position:relative
 }
 
 .index .cont iframe{
@@ -292,7 +293,7 @@ body{
 	width:196px;
 	float:left;
 	margin-left:-200px;
-	border-right:4px solid #243651
+	border-right:4px solid #243651;
 }
 
 .index .menu dl{
@@ -407,6 +408,26 @@ body{
 	color:#fff
 }
 
+.index span.toggle_btn{
+	position:absolute;
+	height:40px;
+	width:4px;
+	top:47%;
+	left:-4px;
+	background:#f30;
+	margin-top:-20px;
+	cursor:pointer;
+}
+
+.index span.toggle_btn em{
+	display:block;
+	width:4px;
+	line-height:10px;
+	color:#fff;
+	text-align:center;
+	padding-top:6px;
+	font-weight:bold;
+}
 /*
  *main page css end
  */
