@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="default">
+<head>
+	<title>后台</title>
+	<meta charset="utf-8" />
+	<link type="text/css" rel="stylesheet" href="../static/css/admin.css" />
+</head>
+
+<body>
+	<fieldset class="form_wrap">
+		<legend>这里是表单的名称：</legend>
+		<form action="">
+			<ul class="form">
+				<li>
+					<label>这个是文本框的样式：</label><input type="text" class="text" />
+				</li>
+				<li>
+					<label>这个是文本框的样式：</label><input type="password" class="text" />
+				</li>
+				<li class="check">
+					<label>这个是复选框的样式：</label><input type="checkbox"><span>全选</span>
+				</li>
+				<li class="radio">
+					<label>这个是单选框的样式：</label><input type="radio" /><span>选择</span>
+				</li>
+				<li class="file">
+					<label>这个是上传表单的样式：</label><input type="file" />
+					<span class="imitate_file">
+						<input type="text" class="text" /><input type="submit" value="选择文件" />
+					</span>
+				</li>
+				<li class="tarea">
+					<label>这个是文本域的样式：</label><textarea></textarea>
+				</li>
+				<li>
+					<label>这个是按钮的样式：</label><input type="text" class="fbtn" />
+				</li>
+			</ul>	
+		</form>
+	</fieldset>
+
+	<div style="border:1px solid #f30;margin-top:50px;padding:10px;background:#ffd4d4">
+		注：html5的几个新的表单属性可以为我们减少很多工作：
+		<ul>
+			<li>autofocus:自动聚焦到指定表单</li>
+			<li>required:自动验证表单，支持正则表达式</li>
+			<li>placeholder:文本框或文本域的默认value，获得焦点会自动清除，失去焦点则显示</li>
+		</ul>
+	</div>
+</body>
+</html>
