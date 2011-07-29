@@ -599,6 +599,10 @@ body{
 	color:#fff
 }
 
+.default .form li.file label{
+	top:5px
+}
+
 .default .form label{
 	position:absolute;
 	top:8px;
@@ -636,6 +640,18 @@ body{
 	border-radius:3px;
 	color:#fff;
 	padding:5px
+}
+
+.default .form input[type="checkbox"], .default .form input[type="radio"]{
+	margin-right:5px;
+	position:relative;
+	display:inline-block;
+	margin-top:5px;
+	top:3px;
+}
+
+.default .form li.radio{
+	padding-bottom:10px
 }
 
 /*

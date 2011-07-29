@@ -4,6 +4,7 @@
 	<title>后台</title>
 	<meta charset="utf-8" />
 	<link type="text/css" rel="stylesheet" href="../static/css/admin.css" />
+	<script type="text/javascript" src="../static/js/My97DatePicker/WdatePicker.js"></script>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
 					<label>这个是文本域的样式：</label><textarea></textarea>
 				</li>
 				<li>
-					<label>请选择日期：</label><input type="text" class="text" />
+				<label>请选择日期：</label><input type="text" class="text" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'})" />
 				</li>
 				<li>
 					<label>这个是按钮的样式：</label><input type="submit" value="这是个按钮" class="fbtn" />
