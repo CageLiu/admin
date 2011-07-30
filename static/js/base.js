@@ -1,49 +1,31 @@
-function $(str){ 
-	var obj; 
-	var classObj = new Array();
-	var $all =  document.getElementsByTagName("*");
-	if(!isNaN(str)) return;
-	else if(str.indexOf("#") > -1){
-		if(document.getElementById(str.substr(1))) 
-		{obj = document.getElementById(str.substr(1));}
-		else obj = ""; 
-		obj.$ = function(str){
-			$all = obj.getElementsByTagName("*"); 
-			if(str.indexOf(".") > -1){ 
-				for(var i = 0; i < $all.length; i++){ 
-					if($all[i].className.split(" ").indexOf(str.substr(1)) > -1){ 
-						classObj.push($all[i]);
-					} 
-				} 
-				return classObj;
-			} 
-			else{ 
-				obj = obj.getElementsByTagName(str);
-				return obj; 
-			} 
-		}; 
+$(document).ready(
+	function(){
+		var $t = $(".menu dt");
+		$t.siblings("dd").eq(0).css("display","block");
+		$t.click(function(){
+			$t.siblings("dd").slideUp("speed");
+			if($(this).next("dd").css("display") == "none"){
+				$(this).next("dd").slideDown("speed");
+			}
+			else{
+				$(this).next("dd").slideUp("speed");
+			}
+		});
+		var $m = $(".menu dd li");
+		$m.click(function()
+			{
+			$m.removeClass();
+			$(this).addClass("current");
+		});
+		var $b = $(".toggle_btn");
+		$b.toggle(function(){
+			$("#page").css("margin-left","4px");
+			$(".user").css("width",0);
+		},
+		function(){
+			$("#page").css("margin-left","200px");
+			$(".user").css("width","196px");
+		}
+		);
 	}
-	else if(str.indexOf(".") > -1){
-		for(var i = 0; i < $all.length; i++){ 
-			if($all[i].className.split(" ").indexOf(str.substr(1)) > -1){ 
-				classObj.push($all[i]); 
-			} 
-		} 
-		classObj.$ = function(i,str){ 
-			return classObj[i].getElementsByTagName(str);
-		}; 
-		return classObj;
-	}
-	else{ 
-		obj = document.getElementsByTagName(str);
-	} 
-	return obj; 
-}
-
-
-
-
-window.onload = function(){
-	var a = $("#menu");
-	console.log(a.nodeName);
-};
+);
