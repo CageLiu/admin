@@ -109,9 +109,9 @@
 					<label>这个是单选框的样式：</label><input type="radio" /><span>选择</span>
 				</li>
 				<li class="file">
-					<label>这个是上传表单的样式：</label><input type="file" />
+					<label>这个是上传表单的样式：</label><input type="file" id="upload" />
 					<span class="imitate_file">
-						<input type="text" class="text" /><input type="submit" value="选择文件" />
+						<input type="text" class="text" id="file_src" /><input type="submit" value="选择文件" />
 					</span>
 				</li>
 				<li class="tarea">
@@ -126,6 +126,16 @@
 			</ul>	
 		</form>
 	</fieldset>
+	
+	<script type="text/javascript">
+		var upload = document.getElementById("upload");
+		var file_src = document.getElementById("file_src");
+		upload.onchange = function(){
+			file_src.value = this.value;
+		}
+	</script>
+
+
 	<div style="border:1px solid #f30;margin-top:50px;padding:10px;background:#ffd4d4">
 		注：html5的几个新的表单属性可以为我们减少很多工作：
 		<ul>

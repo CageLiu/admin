@@ -239,6 +239,7 @@ body{
 	margin-top:-1px;
 	text-indent:0.5em;
 	float:left;
+	overflow:hidden
 }
 
 .index .tool_bar .user span{
@@ -325,7 +326,7 @@ body{
 
 }
 
-.index .menu i.i{
+.index .menu i.show i.i{
 	display:block;
 	width:5px;
 	height:5px;
@@ -333,27 +334,35 @@ body{
 	position:absolute
 }
 
-.index .menu i.i_lt{
+.index .menu i.show i.i_lt{
 	left:2px;
 	top:2px
 }
 
-.index .menu i.i_rt{
+.index .menu i.show i.i_rt{
 	right:2px;
 	top:2px
 }
 
-.index .menu i.i_lb{
+.index .menu i.show i.i_lb{
 	bottom:2px;
 	left:2px
 }
 
-.index .menu i.i_rb{
+.index .menu i.show i.i_rb{
 	bottom:2px;
 	right:2px
 }
 
+.index .menu i.hide{
+	display:none
+}
+
 .index .menu dd{
+	display:none
+}
+
+.index .menu dd li{
 	padding-left:2em;
 	height:25px;
 	line-height:25px;
@@ -367,7 +376,7 @@ body{
 	border-radius:3px
 }
 
-.index .menu dd.current, .index .menu dd:hover{
+.index .menu dd li.current, .index .menu dd li:hover{
 	border-radius:3px 0 0 3px;
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#F9F9F5), to(#EEEDEA));
 	background:-moz-linear-gradient(top,#f9f9f5,#eeedea);
