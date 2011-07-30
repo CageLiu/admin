@@ -326,7 +326,11 @@ body{
 
 }
 
-.index .menu i.show i.i{
+.index .menu i.hide{
+	display:none;
+}
+
+.index .menu i.icon i.i{
 	display:block;
 	width:5px;
 	height:5px;
@@ -334,22 +338,26 @@ body{
 	position:absolute
 }
 
-.index .menu i.show i.i_lt{
+.index .menu i.hide i.i{
+	width:6px
+}
+
+.index .menu i.icon i.i_lt{
 	left:2px;
 	top:2px
 }
 
-.index .menu i.show i.i_rt{
+.index .menu i.icon i.i_rt{
 	right:2px;
 	top:2px
 }
 
-.index .menu i.show i.i_lb{
+.index .menu i.icon i.i_lb{
 	bottom:2px;
 	left:2px
 }
 
-.index .menu i.show i.i_rb{
+.index .menu i.icon i.i_rb{
 	bottom:2px;
 	right:2px
 }
